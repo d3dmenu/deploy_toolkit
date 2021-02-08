@@ -1,10 +1,11 @@
 import uvicorn 
-import requests
 import numpy as np
+import warnings
 
 from fastapi import FastAPI, Form   
 
 app = FastAPI()
+warnings.simplefilter("ignore")
 
 @app.get("/calc")
 async def calculator(a : int = 0, b : int = 0):
