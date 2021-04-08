@@ -9,7 +9,7 @@ warnings.simplefilter("ignore")
 
 @app.get("/")
 async def main():
-    return {"Message": 'Deploy API Success By.Nick'}
+    return {"Message": 'Deploy API Success By.Nicks'}
 
 @app.get("/calc")
 async def calculator(a : int = 0, b : int = 0):
@@ -35,6 +35,3 @@ async def visual(data: list = Form(...), account: str = Form(...), firebase: str
         if PosX < PosY and status == True:
             status = False
     return {"size": len(data), "count": count-1, "account": account, "firebase": firebase}
-
-
-
