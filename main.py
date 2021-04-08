@@ -17,4 +17,4 @@ async def calculator(a : int = 0, b : int = 0):
 
 @app.post("/visual/")
 async def visual(data: list = Form(...)):
-    return {"data": data}
+    return {"data": "EIEI Success"}
