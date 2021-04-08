@@ -16,5 +16,5 @@ async def calculator(a : int = 0, b : int = 0):
     return {"result": a + b}
 
 @app.post("/visual/")
-async def visual(data: str = Form(...)):
+async def visual(data: list = Form(...)):
     return {"data": data}
