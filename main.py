@@ -21,6 +21,7 @@ async def visual(data: list = Form(...)):
 
 @app.post("/visual/")
 async def visual(data: list = Form(...)):
+    print(data)
     result = ""
     p1, p2, p3, p4 = [], [], [], []
     idx1 = [15, 21, 22, 23, 24, 25, 26, 27, 28, 29] # E I
