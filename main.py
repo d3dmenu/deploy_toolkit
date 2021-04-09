@@ -90,4 +90,4 @@ async def visual(data: list = Form(...)):
             result += "J"
         else:
             result += "P"
-    return result
+    return {"data": result}
