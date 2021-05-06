@@ -1,3 +1,4 @@
+import json
 import uvicorn 
 import numpy as np
 import warnings
@@ -13,7 +14,8 @@ async def main():
 
 @app.get("/calc")
 async def calculator(a : int = 0, b : int = 0):
-    return {"result": a + b}
+    dic = {"result": a + b}
+    return json.dumps(dic)
 
 @app.post("/test/")
 async def visual(data: list = Form(...)):
