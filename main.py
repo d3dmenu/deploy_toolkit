@@ -14,8 +14,7 @@ async def main():
 
 @app.get("/calc")
 async def calculator(a : int = 0, b : int = 0):
-    dic = {"result": a + b}
-    return [json.dumps(dic)]
+    return [{"result": a + b}]
 
 @app.post("/test/")
 async def visual(data: list = Form(...)):
